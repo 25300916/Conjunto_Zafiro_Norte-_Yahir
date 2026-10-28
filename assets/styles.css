@@ -1,0 +1,753 @@
+
+/* =========================================
+   CONJUNTO ZAFIRO NORTE
+   Diseño general: azul rey, azul claro,
+   blanco y negro.
+========================================= */
+
+/* ---------- VARIABLES DE COLOR ---------- */
+
+:root {
+    --azul-rey: #123b8b;
+    --azul-profundo: #273552;
+    --azul-claro: #1f67d2;
+    --azul-medio: #4f83d1;
+    --blanco: #f4f1f1;
+    --negro: #101522;
+    --gris: #a1b3a1;
+    --gris-texto: #5c6472;
+    --borde: #dce2ec;
+    --sombra: 0 8px 25px rgba(8, 26, 56, 0.12);
+}
+
+/* ---------- CONFIGURACIÓN GENERAL ---------- */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--negro);
+    background-color: var(--blanco);
+    line-height: 1.7;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--azul-rey);
+    text-decoration: none;
+    transition: color 0.25s ease;
+}
+
+a:hover {
+    color: var(--azul-medio);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: var(--azul-profundo);
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+h2 {
+    font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+::selection {
+    color: var(--blanco);
+    background-color: var(--azul-rey);
+}
+
+/* ---------- MENÚ DE NAVEGACIÓN ---------- */
+
+.navbar {
+    background-color: var(--azul-profundo) !important;
+    padding: 14px 0;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.18);
+}
+
+.navbar .container {
+    gap: 15px;
+}
+
+.navbar-brand {
+    color: var(--blanco) !important;
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand span {
+    color: var(--azul-medio);
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.navbar .nav-link {
+    color: #e7edfa !important;
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 9px 13px !important;
+    border-radius: 6px;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: var(--blanco) !important;
+    background-color: rgba(79, 131, 209, 0.25);
+}
+
+.navbar .nav-link.active {
+    color: var(--blanco) !important;
+    background-color: var(--azul-rey);
+}
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(79, 131, 209, 0.4);
+}
+
+/* ---------- PORTADA DE INICIO ---------- */
+
+.hero {
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 20px;
+    text-align: center;
+    color: var(--blanco);
+    background:
+        linear-gradient(
+            135deg,
+            rgba(8, 26, 56, 0.97),
+            rgba(18, 59, 139, 0.88)
+        );
+    position: relative;
+    overflow: hidden;
+}
+
+.hero .container {
+    max-width: 950px;
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1,
+.hero h2,
+.hero h3 {
+    color: var(--blanco);
+}
+
+.hero h1 {
+    margin-bottom: 22px;
+    font-weight: 800;
+}
+
+.hero p {
+    max-width: 750px;
+    margin: 0 auto 28px;
+    color: #edf3ff;
+    font-size: 1.15rem;
+}
+
+.hero img {
+    border: 4px solid rgba(255, 255, 255, 0.8);
+    border-radius: 16px;
+    box-shadow: var(--sombra);
+}
+
+/* ---------- ENCABEZADOS DE LAS PÁGINAS ---------- */
+
+.encabezado-pagina {
+    padding: 75px 20px;
+    color: var(--blanco);
+    background: linear-gradient(
+        125deg,
+        var(--azul-profundo),
+        var(--azul-rey)
+    );
+}
+
+.encabezado-pagina .container {
+    max-width: 950px;
+}
+
+.encabezado-pagina h1 {
+    color: var(--blanco);
+    margin-bottom: 15px;
+}
+
+.encabezado-pagina p {
+    color: #e6efff;
+    font-size: 1.1rem;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+/* ---------- TÍTULOS Y SECCIONES ---------- */
+
+.titulo-seccion {
+    text-align: center;
+    margin-bottom: 38px;
+    position: relative;
+    padding-bottom: 16px;
+}
+
+.titulo-seccion::after {
+    content: "";
+    display: block;
+    width: 75px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 5px;
+    background-color: var(--azul-rey);
+}
+
+.seccion-oscura {
+    padding: 70px 0;
+    color: var(--blanco);
+    background-color: var(--azul-profundo);
+}
+
+.seccion-oscura h1,
+.seccion-oscura h2,
+.seccion-oscura h3,
+.seccion-oscura h4 {
+    color: var(--azul-medio);
+}
+
+.seccion-oscura p {
+    color: #e2eafa;
+}
+
+.seccion-oscura .titulo-seccion::after {
+    background-color: var(--azul-medio);
+}
+
+/* ---------- BOTONES ---------- */
+
+.btn-dorado {
+    display: inline-block;
+    padding: 12px 25px;
+    border: 2px solid var(--azul-rey);
+    border-radius: 8px;
+    background-color: var(--azul-rey);
+    color: var(--blanco);
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.btn-dorado:hover,
+.btn-dorado:focus {
+    background-color: var(--azul-profundo);
+    border-color: var(--azul-profundo);
+    color: var(--blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(8, 26, 56, 0.2);
+}
+
+.btn-dorado:focus-visible {
+    outline: 3px solid var(--azul-medio);
+    outline-offset: 3px;
+}
+
+/* ---------- TARJETAS MUSICALES Y SERVICIOS ---------- */
+
+.tarjeta-musical {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.tarjeta-musical:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(8, 26, 56, 0.18);
+}
+
+.tarjeta-musical img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    background-color: var(--azul-claro);
+}
+
+.tarjeta-musical .card-body,
+.tarjeta-musical .contenido-tarjeta {
+    padding: 24px;
+}
+
+.tarjeta-musical h3,
+.tarjeta-musical h4,
+.tarjeta-musical h5 {
+    color: var(--azul-rey);
+    margin-bottom: 12px;
+}
+
+.tarjeta-musical p {
+    color: var(--gris-texto);
+}
+
+.seccion-oscura .tarjeta-musical {
+    color: var(--negro);
+    background-color: var(--blanco);
+}
+
+.seccion-oscura .tarjeta-musical p {
+    color: var(--gris-texto);
+}
+
+.seccion-oscura .tarjeta-musical h3,
+.seccion-oscura .tarjeta-musical h4,
+.seccion-oscura .tarjeta-musical h5 {
+    color: var(--azul-rey);
+}
+
+/* ---------- TARJETAS DE MISIÓN Y VISIÓN ---------- */
+
+.tarjeta-info {
+    height: 100%;
+    padding: 28px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-left: 5px solid var(--azul-rey);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.tarjeta-info h3,
+.tarjeta-info h4 {
+    color: var(--azul-rey);
+    margin-bottom: 15px;
+}
+
+.tarjeta-info p {
+    color: var(--gris-texto);
+    margin-bottom: 0;
+}
+
+.seccion-oscura .tarjeta-info {
+    color: var(--negro);
+    background-color: var(--blanco);
+}
+
+.seccion-oscura .tarjeta-info p {
+    color: var(--gris-texto);
+}
+
+/* ---------- TARJETAS DE VALORES ---------- */
+
+.tarjeta-valor {
+    height: 100%;
+    padding: 25px 20px;
+    text-align: center;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(8, 26, 56, 0.08);
+    transition: transform 0.25s ease;
+}
+
+.tarjeta-valor:hover {
+    transform: translateY(-4px);
+}
+
+.tarjeta-valor h3,
+.tarjeta-valor h4 {
+    color: var(--azul-rey);
+    margin: 12px 0;
+}
+
+.tarjeta-valor p {
+    color: var(--gris-texto);
+    margin-bottom: 0;
+}
+
+.icono-valor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 16px;
+    border-radius: 50%;
+    color: var(--azul-rey);
+    background-color: var(--azul-claro);
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+/* ---------- GALERÍA DE FOTOS ---------- */
+
+.photo-card {
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+}
+
+.photo-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.photo-card:hover img {
+    transform: scale(1.04);
+}
+
+.photo-card h3,
+.photo-card h4,
+.photo-card p {
+    margin: 15px 18px;
+}
+
+.photo-card h3,
+.photo-card h4 {
+    color: var(--azul-rey);
+}
+
+/* ---------- IMÁGENES PENDIENTES ---------- */
+
+.foto-pendiente {
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    color: var(--azul-rey);
+    background: linear-gradient(
+        135deg,
+        var(--azul-claro),
+        #f5f8ff
+    );
+    border: 2px dashed var(--azul-medio);
+    border-radius: 10px;
+}
+
+.foto-pendiente p {
+    margin: 0;
+    font-weight: 600;
+}
+
+/* ---------- LISTA DE EVENTOS ---------- */
+
+.evento-item {
+    height: 100%;
+    padding: 22px;
+    text-align: center;
+    color: var(--azul-profundo);
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(8, 26, 56, 0.08);
+    transition:
+        transform 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.evento-item:hover {
+    transform: translateY(-4px);
+    background-color: var(--azul-claro);
+}
+
+.evento-item h3,
+.evento-item h4,
+.evento-item p {
+    margin-bottom: 0;
+}
+
+.evento-item h3,
+.evento-item h4 {
+    color: var(--azul-rey);
+}
+
+/* ---------- FORMULARIOS ---------- */
+
+.formulario-web {
+    padding: 28px;
+    background-color: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 14px;
+    box-shadow: var(--sombra);
+}
+
+.formulario-web label {
+    display: block;
+    color: var(--azul-profundo);
+    font-weight: 700;
+}
+
+.form-control,
+.form-select {
+    min-height: 45px;
+    padding: 10px 12px;
+    color: var(--negro);
+    background-color: var(--blanco);
+    border: 1px solid #cbd4e2;
+    border-radius: 7px;
+}
+
+textarea.form-control {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--azul-medio);
+    box-shadow: 0 0 0 0.2rem rgba(79, 131, 209, 0.2);
+}
+
+.formulario-web .btn-dorado {
+    margin-top: 5px;
+}
+
+.formulario-web button:disabled {
+    cursor: not-allowed;
+    opacity: 0.65;
+}
+
+/* ---------- CONTENIDO GENERAL ---------- */
+
+main.container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+main img.rounded {
+    border-radius: 14px !important;
+}
+
+main ul {
+    padding-left: 25px;
+}
+
+main li {
+    margin-bottom: 8px;
+}
+
+main .row {
+    align-items: stretch;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+
+.footer {
+    padding: 25px 15px;
+    color: var(--blanco);
+    background-color: var(--azul-profundo);
+}
+
+.footer p {
+    margin: 0;
+    color: #e2eafa;
+    font-size: 0.95rem;
+}
+
+/* ---------- MENSAJES Y RESULTADOS ---------- */
+
+#resultadoAgenda,
+#resultadoRepertorio {
+    margin-top: 18px;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.mensaje-exito {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #b7dfc0;
+}
+
+.mensaje-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border: 1px solid #f1bfc4;
+}
+
+/* ---------- ACCESIBILIDAD ---------- */
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--azul-medio);
+    outline-offset: 3px;
+}
+
+/* ---------- TABLETAS ---------- */
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        gap: 3px;
+        padding-top: 12px;
+    }
+
+    .navbar .nav-link {
+        padding: 10px 12px !important;
+    }
+
+    .hero {
+        min-height: 430px;
+        padding: 70px 20px;
+    }
+
+    .encabezado-pagina {
+        padding: 60px 20px;
+    }
+
+    .seccion-oscura {
+        padding: 55px 0;
+    }
+}
+
+/* ---------- CELULARES ---------- */
+
+@media (max-width: 767.98px) {
+    body {
+        font-size: 0.97rem;
+    }
+
+    .hero {
+        min-height: 360px;
+        padding: 55px 18px;
+    }
+
+    .hero p,
+    .encabezado-pagina p {
+        font-size: 1rem;
+    }
+
+    .encabezado-pagina {
+        padding: 48px 18px;
+    }
+
+    .seccion-oscura {
+        padding: 45px 0;
+    }
+
+    .titulo-seccion {
+        margin-bottom: 28px;
+    }
+
+    .tarjeta-musical img {
+        height: 215px;
+    }
+
+    .photo-card img {
+        height: 220px;
+    }
+
+    .tarjeta-info,
+    .tarjeta-valor {
+        padding: 22px;
+    }
+
+    .formulario-web {
+        padding: 20px;
+    }
+
+    .btn-dorado {
+        max-width: 100%;
+    }
+
+    main.container {
+        margin-top: 30px !important;
+        margin-bottom: 30px !important;
+    }
+}
+
+/* ---------- CELULARES PEQUEÑOS ---------- */
+
+@media (max-width: 400px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .hero {
+        padding: 45px 14px;
+    }
+
+    .encabezado-pagina {
+        padding: 40px 14px;
+    }
+
+    .formulario-web {
+        padding: 16px;
+    }
+
+    .tarjeta-musical .card-body,
+    .tarjeta-musical .contenido-tarjeta {
+        padding: 18px;
+    }
+}
+
+/* ---------- REDUCIR ANIMACIONES ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}

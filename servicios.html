@@ -1,89 +1,151 @@
-<section class="seccion-oscura py-5">
-    <div class="container">
-        <div class="text-center mb-4">
-            <h2 class="titulo-seccion">Nuestros servicios</h2>
-            <p>
-                Música para acompañar tus celebraciones y momentos especiales.
-            </p>
-        </div>
-        <div class="row g-4">
-            <div class="col-md-6 col-lg-3">
-                <article class="tarjeta-musical h-100">
-                    <img
-                        src="assets/imagenes/bodas.jpg"
-                        class="img-fluid"
-                        alt="Servicio musical para bodas"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="foto-pendiente" style="display:none;">
-                        Agrega una fotografía de bodas
-                    </div>
-                    <div class="p-3">
-                        <h3>Bodas</h3>
-                        <p>
-                            Acompañamos ese día especial con música para crear
-                            un ambiente agradable y momentos inolvidables.
-                        </p>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <article class="tarjeta-musical h-100">
-                    <img
-                        src="assets/imagenes/fiestas.jpg"
-                        class="img-fluid"
-                        alt="Servicio musical para fiestas"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="foto-pendiente" style="display:none;">
-                        Agrega una fotografía de fiestas
-                    </div>
-                    <div class="p-3">
-                        <h3>Fiestas</h3>
-                        <p>
-                            Música para cumpleaños, reuniones familiares
-                            y celebraciones llenas de alegría.
-                        </p>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <article class="tarjeta-musical h-100">
-                    <img
-                        src="assets/imagenes/eventos-privados.jpg"
-                        class="img-fluid"
-                        alt="Servicio musical para eventos privados"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="foto-pendiente" style="display:none;">
-                        Agrega una fotografía de eventos privados
-                    </div>
-                    <div class="p-3">
-                        <h3>Eventos privados</h3>
-                        <p>
-                            Una propuesta musical para reuniones particulares
-                            y celebraciones organizadas a tu gusto.
-                        </p>
-                    </div>
-                </article>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <article class="tarjeta-musical h-100">
-                    <img
-                        src="assets/imagenes/eventos-sociales.jpg"
-                        class="img-fluid"
-                        alt="Servicio musical para eventos sociales"
-                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="foto-pendiente" style="display:none;">
-                        Agrega una fotografía de eventos sociales
-                    </div>
 
-                    <div class="p-3">
-                        <h3>Eventos sociales</h3>
-                        <p>
-                            Participamos en distintas celebraciones sociales,
-                            de acuerdo con la disponibilidad del conjunto.
-                        </p>
-                    </div>
-                </article>
-            </div>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | Conjunto Zafiro Norte</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- MENÚ DE NAVEGACIÓN -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">Zafiro Norte</a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menu"
+                aria-controls="menu" aria-expanded="false"
+                aria-label="Mostrar navegación">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="repertorio.html">Repertorio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="agenda.html">Agenda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contrataciones.html">Contrataciones</a>
+                </li>
+            </ul>
         </div>
     </div>
-</section>
+</nav>
+<header class="encabezado-pagina text-center">
+    <div class="container">
+        <h1>Nuestros servicios</h1>
+        <p>Música en vivo para acompañar tus mejores momentos.</p>
+    </div>
+</header>
+<main class="container my-5">
+
+    <div class="text-center mb-5">
+        <h2>¿Qué tipo de eventos amenizamos?</h2>
+        <p>
+            En Conjunto Zafiro Norte ofrecemos música en vivo para
+            diferentes celebraciones. Nos adaptamos al tipo de evento,
+            al ambiente y a las preferencias de nuestros clientes.
+        </p>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="assets/imagenes/bodas.jpg"
+                     class="card-img-top"
+                     alt="Servicio musical para bodas"
+                     onerror="this.style.display='none'">
+                <div class="card-body">
+                    <h3 class="card-title">Bodas</h3>
+                    <p class="card-text">
+                        Música en vivo para acompañar la celebración,
+                        crear un ambiente especial y hacer que los
+                        invitados disfruten de la fiesta.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="assets/imagenes/fiestas.jpg"
+                     class="card-img-top"
+                     alt="Música en vivo para fiestas"
+                     onerror="this.style.display='none'">
+                <div class="card-body">
+                    <h3 class="card-title">Fiestas particulares</h3>
+                    <p class="card-text">
+                        Amenizamos cumpleaños, reuniones familiares,
+                        aniversarios y otras celebraciones privadas
+                        con música para disfrutar y bailar.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="assets/imagenes/eventos-sociales.jpg"
+                     class="card-img-top"
+                     alt="Presentación musical en escenario"
+                     onerror="this.style.display='none'">
+                <div class="card-body">
+                    <h3 class="card-title">Eventos sociales</h3>
+                    <p class="card-text">
+                        Participamos en celebraciones y eventos
+                        sociales que buscan un acompañamiento
+                        musical en vivo.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="assets/imagenes/eventos-privados.jpg"
+                     class="card-img-top"
+                     alt="Presentación de Conjunto Zafiro Norte"
+                     onerror="this.style.display='none'">
+                <div class="card-body">
+                    <h3 class="card-title">Eventos privados</h3>
+                    <p class="card-text">
+                        Podemos conversar sobre las características
+                        de tu evento para conocer tus necesidades
+                        y revisar la disponibilidad de una fecha.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="text-center mt-5">
+        <h2>¿Quieres música en tu evento?</h2>
+        <p>Consulta una fecha y cuéntanos qué celebración estás organizando.</p>
+        <a href="agenda.html" class="btn btn-dorado">
+            Consultar agenda
+        </a>
+        <a href="contrataciones.html" class="btn btn-outline-dark ms-2">
+            Contrataciones
+        </a>
+    </div>
+</main>
+<footer class="footer text-center">
+    <p>© <span id="anioActual"></span> Conjunto Zafiro Norte</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/script.js"></script>
+
+</body>
+</html>
