@@ -1,12 +1,3 @@
-
-/* =========================================
-   CONJUNTO ZAFIRO NORTE
-   Diseño general: azul rey, azul claro,
-   blanco y negro.
-========================================= */
-
-/* ---------- VARIABLES DE COLOR ---------- */
-
 :root {
     --azul-rey: #123b8b;
     --azul-profundo: #273552;
@@ -19,18 +10,13 @@
     --borde: #dce2ec;
     --sombra: 0 8px 25px rgba(8, 26, 56, 0.12);
 }
-
-/* ---------- CONFIGURACIÓN GENERAL ---------- */
-
 * {
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 85px;
 }
-
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +39,6 @@ a {
 a:hover {
     color: var(--azul-medio);
 }
-
 h1,
 h2,
 h3,
@@ -63,55 +48,42 @@ h5 {
     font-weight: 700;
     line-height: 1.25;
 }
-
 h1 {
     font-size: clamp(2rem, 5vw, 3.5rem);
 }
-
 h2 {
     font-size: clamp(1.6rem, 3vw, 2.3rem);
 }
-
 h3 {
     font-size: 1.4rem;
 }
-
 p {
     margin-bottom: 1rem;
 }
-
 ::selection {
     color: var(--blanco);
     background-color: var(--azul-rey);
 }
-
-/* ---------- MENÚ DE NAVEGACIÓN ---------- */
-
 .navbar {
     background-color: var(--azul-profundo) !important;
     padding: 14px 0;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.18);
 }
-
 .navbar .container {
     gap: 15px;
 }
-
 .navbar-brand {
     color: var(--blanco) !important;
     font-size: 1.3rem;
     font-weight: 800;
     letter-spacing: 0.5px;
 }
-
 .navbar-brand span {
     color: var(--azul-medio);
 }
-
 .navbar-nav {
     gap: 5px;
 }
-
 .navbar .nav-link {
     color: #e7edfa !important;
     font-size: 0.95rem;
@@ -122,28 +94,21 @@ p {
         background-color 0.25s ease,
         color 0.25s ease;
 }
-
 .navbar .nav-link:hover,
 .navbar .nav-link:focus {
     color: var(--blanco) !important;
     background-color: rgba(79, 131, 209, 0.25);
 }
-
 .navbar .nav-link.active {
     color: var(--blanco) !important;
     background-color: var(--azul-rey);
 }
-
 .navbar-toggler {
     border: 1px solid rgba(255, 255, 255, 0.5);
 }
-
 .navbar-toggler:focus {
     box-shadow: 0 0 0 3px rgba(79, 131, 209, 0.4);
 }
-
-/* ---------- PORTADA DE INICIO ---------- */
-
 .hero {
     min-height: 520px;
     display: flex;
@@ -161,24 +126,20 @@ p {
     position: relative;
     overflow: hidden;
 }
-
 .hero .container {
     max-width: 950px;
     position: relative;
     z-index: 1;
 }
-
 .hero h1,
 .hero h2,
 .hero h3 {
     color: var(--blanco);
 }
-
 .hero h1 {
     margin-bottom: 22px;
     font-weight: 800;
 }
-
 .hero p {
     max-width: 750px;
     margin: 0 auto 28px;
@@ -191,9 +152,6 @@ p {
     border-radius: 16px;
     box-shadow: var(--sombra);
 }
-
-/* ---------- ENCABEZADOS DE LAS PÁGINAS ---------- */
-
 .encabezado-pagina {
     padding: 75px 20px;
     color: var(--blanco);
@@ -219,8 +177,6 @@ p {
     margin: 0 auto;
     max-width: 750px;
 }
-
-/* ---------- TÍTULOS Y SECCIONES ---------- */
 
 .titulo-seccion {
     text-align: center;
@@ -259,9 +215,6 @@ p {
 .seccion-oscura .titulo-seccion::after {
     background-color: var(--azul-medio);
 }
-
-/* ---------- BOTONES ---------- */
-
 .btn-dorado {
     display: inline-block;
     padding: 12px 25px;
@@ -291,9 +244,6 @@ p {
     outline: 3px solid var(--azul-medio);
     outline-offset: 3px;
 }
-
-/* ---------- TARJETAS MUSICALES Y SERVICIOS ---------- */
-
 .tarjeta-musical {
     height: 100%;
     overflow: hidden;
@@ -349,9 +299,6 @@ p {
 .seccion-oscura .tarjeta-musical h5 {
     color: var(--azul-rey);
 }
-
-/* ---------- TARJETAS DE MISIÓN Y VISIÓN ---------- */
-
 .tarjeta-info {
     height: 100%;
     padding: 28px;
@@ -381,8 +328,6 @@ p {
 .seccion-oscura .tarjeta-info p {
     color: var(--gris-texto);
 }
-
-/* ---------- TARJETAS DE VALORES ---------- */
 
 .tarjeta-valor {
     height: 100%;
@@ -423,9 +368,6 @@ p {
     font-size: 1.8rem;
     font-weight: 800;
 }
-
-/* ---------- GALERÍA DE FOTOS ---------- */
-
 .photo-card {
     height: 100%;
     overflow: hidden;
@@ -457,9 +399,6 @@ p {
 .photo-card h4 {
     color: var(--azul-rey);
 }
-
-/* ---------- IMÁGENES PENDIENTES ---------- */
-
 .foto-pendiente {
     min-height: 180px;
     display: flex;
@@ -481,8 +420,6 @@ p {
     margin: 0;
     font-weight: 600;
 }
-
-/* ---------- LISTA DE EVENTOS ---------- */
 
 .evento-item {
     height: 100%;
@@ -513,8 +450,6 @@ p {
 .evento-item h4 {
     color: var(--azul-rey);
 }
-
-/* ---------- FORMULARIOS ---------- */
 
 .formulario-web {
     padding: 28px;
@@ -559,9 +494,6 @@ textarea.form-control {
     cursor: not-allowed;
     opacity: 0.65;
 }
-
-/* ---------- CONTENIDO GENERAL ---------- */
-
 main.container {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -583,8 +515,6 @@ main .row {
     align-items: stretch;
 }
 
-/* ---------- PIE DE PÁGINA ---------- */
-
 .footer {
     padding: 25px 15px;
     color: var(--blanco);
@@ -596,9 +526,6 @@ main .row {
     color: #e2eafa;
     font-size: 0.95rem;
 }
-
-/* ---------- MENSAJES Y RESULTADOS ---------- */
-
 #resultadoAgenda,
 #resultadoRepertorio {
     margin-top: 18px;
@@ -618,8 +545,6 @@ main .row {
     border: 1px solid #f1bfc4;
 }
 
-/* ---------- ACCESIBILIDAD ---------- */
-
 button,
 input,
 select,
@@ -632,8 +557,6 @@ button:focus-visible {
     outline: 3px solid var(--azul-medio);
     outline-offset: 3px;
 }
-
-/* ---------- TABLETAS ---------- */
 
 @media (max-width: 991.98px) {
     .navbar-nav {
@@ -658,8 +581,6 @@ button:focus-visible {
         padding: 55px 0;
     }
 }
-
-/* ---------- CELULARES ---------- */
 
 @media (max-width: 767.98px) {
     body {
@@ -714,9 +635,6 @@ button:focus-visible {
         margin-bottom: 30px !important;
     }
 }
-
-/* ---------- CELULARES PEQUEÑOS ---------- */
-
 @media (max-width: 400px) {
     .navbar-brand {
         font-size: 1.1rem;
@@ -739,9 +657,6 @@ button:focus-visible {
         padding: 18px;
     }
 }
-
-/* ---------- REDUCIR ANIMACIONES ---------- */
-
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
